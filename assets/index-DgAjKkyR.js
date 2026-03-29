@@ -204,8 +204,8 @@ Sorin`;return`mailto:${e.email}?subject=Application%3A%20English-speaking%20Psyc
           font-size: 21px; color: var(--cv-text-muted); letter-spacing: 0.5px;
         }
 
-        .cv-right-content { padding: 30px 40px 20px 40px; flex: 1; overflow: hidden; }
-        .cv-section { margin-bottom: 28px; }
+        .cv-right-content { padding: 65px 40px 20px 40px; flex: 1; overflow: hidden; }
+        .cv-section { margin-bottom: 45px; }
         .cv-section h2 {
           font-family: 'Alice', serif; font-weight: 400; font-size: 19px; color: var(--cv-text-dark);
           letter-spacing: 12px; text-transform: uppercase;
