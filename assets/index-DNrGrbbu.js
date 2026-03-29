@@ -289,10 +289,29 @@ Sorin Briceag`;return(0,A.jsxs)(`div`,{children:[(0,A.jsxs)(`header`,{className:
         }
 
         @media print {
-          body { background: white !important; }
-          .no-print { display: none !important; }
-          .cv-wrapper { box-shadow: none; transform: none; width: 100%; height: 100%; }
-          .cv-editable { outline: none !important; background: transparent !important; }
           @page { size: A4; margin: 0; }
+          body, html, #root { 
+            background: white !important; 
+            margin: 0 !important; 
+            padding: 0 !important; 
+          }
+          .no-print { display: none !important; }
+          .cv-builder-container { 
+            padding: 0 !important; 
+            display: block !important; 
+          }
+          .cv-wrapper { 
+            box-shadow: none !important; 
+            transform: none !important; 
+            width: 210mm !important; 
+            height: 297mm !important; 
+            margin: 0 !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+          }
+          .cv-sidebar { height: 297mm !important; }
+          .cv-page { height: 297mm !important; }
+          .cv-editable { outline: none !important; background: transparent !important; }
         }
       `})]})}function yr(){return(0,A.jsxs)(`div`,{className:`layout-container`,children:[(0,A.jsxs)(`nav`,{className:`sidebar`,children:[(0,A.jsxs)(`div`,{className:`brand`,children:[(0,A.jsx)(`div`,{style:{width:`32px`,height:`32px`,borderRadius:`8px`,background:`linear-gradient(135deg, var(--primary), var(--secondary))`,display:`flex`,alignItems:`center`,justifyContent:`center`,color:`white`},children:`S`}),`Sorin Career`]}),(0,A.jsxs)(`div`,{className:`nav-links`,children:[(0,A.jsxs)(En,{to:`/`,className:({isActive:e})=>`nav-item ${e?`active`:``}`,end:!0,children:[(0,A.jsx)(ir,{size:20}),`Tracker`]}),(0,A.jsxs)(En,{to:`/cv`,className:({isActive:e})=>`nav-item ${e?`active`:``}`,children:[(0,A.jsx)(nr,{size:20}),`CV Builder`]})]})]}),(0,A.jsx)(`main`,{className:`main-content`,children:(0,A.jsxs)(Ft,{children:[(0,A.jsx)(Nt,{path:`/`,element:(0,A.jsx)(gr,{})}),(0,A.jsx)(Nt,{path:`/cv`,element:(0,A.jsx)(vr,{})})]})})]})}(0,fr.createRoot)(document.getElementById(`root`)).render((0,A.jsx)(x.StrictMode,{children:(0,A.jsx)(Sn,{children:(0,A.jsx)(yr,{})})}));
