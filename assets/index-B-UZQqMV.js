@@ -207,20 +207,20 @@ Sorin`;return`mailto:${e.email}?subject=Application%3A%20English-speaking%20Psyc
         .cv-right-content { padding: 24px 30px 20px 38px; flex: 1; overflow: hidden; }
         .cv-section { margin-bottom: 22px; }
         .cv-section h2 {
-          font-family: 'Alice', serif; font-weight: 400; font-size: 18.5px; color: var(--cv-text-dark);
-          letter-spacing: 10px; text-transform: uppercase;
-          border-bottom: 1px solid var(--cv-line-right); padding-bottom: 6px; margin-bottom: 12px;
+          font-family: 'Alice', serif; font-weight: 400; font-size: 16px; color: var(--cv-text-dark);
+          letter-spacing: 8px; text-transform: uppercase;
+          border-bottom: 1px solid var(--cv-line-right); padding-bottom: 5px; margin-bottom: 10px;
         }
-        .cv-body-text { font-size: 10.5px; line-height: 1.7; text-align: justify; color: var(--cv-text-body); }
+        .cv-body-text { font-size: 9.5px; line-height: 1.6; text-align: justify; color: var(--cv-text-body); }
 
-        .cv-exp-entry { display: flex; margin-bottom: 8px; }
-        .cv-exp-date-col { width: 76px; min-width: 76px; padding-top: 2px; text-align: center; }
-        .cv-exp-date { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 10.5px; color: var(--cv-primary); letter-spacing: 2px; line-height: 1.6;}
-        .cv-exp-vsep { width: 1.5px; background: var(--cv-vsep); margin: 0 14px; align-self: stretch; border-radius: 1px;}
-        .cv-exp-details { flex: 1; }
-        .cv-exp-company { font-weight: 700; font-size: 13px; color: var(--cv-text-dark); line-height: 1.35; }
-        .cv-exp-title { font-size: 11px; color: var(--cv-text-gray); margin: 2px 0 7px; }
-        .cv-bullets { list-style: disc; padding-left: 18px; font-size: 10.5px; color: var(--cv-text-body); line-height: 1.65; }
+        .cv-exp-entry { display: flex; margin-bottom: 12px; }
+        .cv-exp-date-col { width: 70px; min-width: 70px; padding-top: 2px; text-align: right; margin-right: -4px; }
+        .cv-exp-date { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 9.5px; color: var(--cv-primary); letter-spacing: 1.5px; line-height: 1.5;}
+        .cv-exp-vsep { width: 1.5px; background: var(--cv-vsep); margin: 0 16px; align-self: stretch; border-radius: 1px;}
+        .cv-exp-details { flex: 1; padding-bottom: 4px; }
+        .cv-exp-company { font-weight: 700; font-size: 11.5px; color: var(--cv-text-dark); line-height: 1.3; margin-bottom: 2px; }
+        .cv-exp-title { font-size: 10px; color: var(--cv-text-gray); margin: 0 0 5px; font-style: italic;}
+        .cv-bullets { list-style: disc; padding-left: 16px; font-size: 9.5px; color: var(--cv-text-body); line-height: 1.5; }
         .cv-bullets li { margin-bottom: 2px; }
         .cv-bullets li::marker { color: var(--cv-accent); }
 
