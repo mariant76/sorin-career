@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Career Strategy: Copenhagen Market Entry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent-primary: #3b82f6;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+            --accent-orange: #f59e0b;
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --header-gradient: linear-gradient(135deg, #2563eb, #8b5cf6);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.6;
+            padding-bottom: 4rem;
+        }
+
+        header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 1rem auto 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .alert-box {
+            background: rgba(254, 243, 199, 0.8);
+            border-left: 4px solid var(--accent-orange);
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .alert-box strong {
+            color: #b45309;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .section-title span.badge {
+            background: var(--header-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+        }
+
+        .priority-1 .card::before { background: var(--accent-primary); }
+        .priority-2 .card::before { background: var(--accent-purple); }
+        .priority-3 .card::before { background: var(--accent-green); }
+        .bonus .card::before { background: var(--accent-orange); }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .card-header {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .meta-info {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .meta-info div {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .pitch-box {
+            background: rgba(59, 130, 246, 0.05);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-size: 0.95rem;
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            position: relative;
+        }
+
+        .pitch-box::before {
+            content: 'Pitch Angle:';
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            background: rgba(0,0,0,0.05);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 3rem 1.5rem;
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>2026 Career Strategy</h1>
+        <p>A tailored Copenhagen Market Entry plan for Sorin, specializing in Addiction, Recovery, and Expat Mental Health.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="alert-box">
+            <strong>⚠️ Core Strategic Advantage:</strong><br> 
+            Because the title <em>Psykoterapeut</em> (Psychotherapist) is unprotected in Denmark, Sorin can bypass authorization bureaucracy and immediately operate in the private market. Always proactively clarify the difference from the protected "Psykolog" title if asked.
+        </div>
+
+        <!-- Priority 1 -->
+        <h2 class="section-title"><span class="badge">🥇 Priority 1:</span> Private Addiction Clinics</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Direct matches targeting international clients and executives who prefer treatment in English.</p>
+        
+        <div class="grid priority-1">
+            
+            <div class="card">
+                <div class="tag">Direct Match</div>
+                <div class="card-header">Dansk Misbrugsbehandling</div>
+                <div class="meta-info">
+                    <div>📍 H.C. Andersens Boulevard 37, 2nd Fl, 1553 CPH V</div>
+                    <div>🔗 <a href="https://danskmisbrugsbehandling.dk" target="_blank">danskmisbrugsbehandling.dk</a></div>
+                    <div>✉️ <strong>Action:</strong> Direct LinkedIn outreach to Clinical Director, then general email.</div>
+                </div>
+                <div class="pitch-box">
+                    "With a growing expat community facing high-stress corporate environments, I offer ready-made, English-language out-patient recovery and relapse prevention programs that instantly expand your demographic reach."
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="tag">Premium & Discreet</div>
+                <div class="card-header">Anker Huis Rehab</div>
+                <div class="meta-info">
+                    <div>📍 Remote intake & Greater Copenhagen</div>
+                    <div>🔗 <a href="https://ankerhuis.com" target="_blank">ankerhuis.com</a></div>
+                    <div>✉️ <strong>Action:</strong> Pitch a tailored syllabus for an intensive Sober Coaching module.</div>
+                </div>
+                <div class="pitch-box">
+                    "I blend evidence-based psychotherapy with hands-on Sober Coaching. I can manage high-profile clients who require discreet, flexible, intense 1:1 support in English."
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="tag">International Scale</div>
+                <div class="card-header">Narconon Europe</div>
+                <div class="meta-info">
+                    <div>📍 Arresødalvej 100, 3300 Frederiksværk</div>
+                    <div>🔗 <a href="https://narcononeurope.dk" target="_blank">narcononeurope.dk</a></div>
+                    <div>✉️ <strong>Action:</strong> Direct application via internal portal.</div>
+                </div>
+                <div class="pitch-box">
+                    "My background as an international Psychotherapist gives me the cultural competence to handle an incredibly diverse patient intake. I bring deep crisis-intervention experience across multiple languages."
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Priority 2 -->
+        <h2 class="section-title"><span class="badge">🥈 Priority 2:</span> Expat Private Practices</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Clinics dealing with expat burnout, integration, and isolation-induced substance use.</p>
+
+        <div class="grid priority-2">
+            
+            <div class="card">
+                <div class="tag">Expat Focused</div>
+                <div class="card-header">The Little White House</div>
+                <div class="meta-info">
+                    <div>📍 Ørnevej 45, 2400 Copenhagen NV</div>
+                    <div>🔗 <a href="https://thelittlewhitehouse.dk" target="_blank">thelittlewhitehouse.dk</a></div>
+                    <div>✉️ <strong>Action:</strong> Send video intro + CV to contact@thelittlewhitehouse.dk.</div>
+                </div>
+                <div class="pitch-box">
+                    "I want to bring my specialized 'Expat Addiction and Recovery Sub-clinic' to your practice, handling the complex dual-diagnosis clients you might currently be referring out."
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="tag">Co-working Model</div>
+                <div class="card-header">EGOLAB / Therapist.dk</div>
+                <div class="meta-info">
+                    <div>📍 Central Copenhagen Hubs</div>
+                    <div>🔗 <a href="https://therapist.dk" target="_blank">therapist.dk</a></div>
+                    <div>✉️ <strong>Action:</strong> Apply to join roster via web portal.</div>
+                </div>
+                <div class="pitch-box">
+                    "I am an EU-trained Psychotherapist fully prepared to absorb the overflow of international clients seeking help with coping mechanisms, digital addiction, and cultural adjustment."
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="tag">Premium Network</div>
+                <div class="card-header">The Psychology Group Denmark</div>
+                <div class="meta-info">
+                    <div>📍 Strøget & Central Hubs</div>
+                    <div>✉️ <strong>Action:</strong> Direct email pitch to founding partners.</div>
+                </div>
+                <div class="pitch-box">
+                    "As a *Psykoterapeut*, I complement your *Psykologer* by taking on intensive coaching and relapse-prevention, offering the high-touch interventions that expats demand."
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Priority 3 -->
+        <h2 class="section-title"><span class="badge">🥉 Priority 3:</span> Digital Marketplaces</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Fastest way to build a caseload while securing an in-person anchor role.</p>
+
+        <div class="grid priority-3">
+            <div class="card">
+                <div class="card-header">It's Complicated</div>
+                <div class="meta-info">Target expats in CPH/Berlin. Optimize profile for "Expat Burnout" and "Sober Coaching".</div>
+            </div>
+            <div class="card">
+                <div class="card-header">Mindler Denmark</div>
+                <div class="meta-info">Pitch as an expert contractor for their private-pay, English-speaking corporate health modules.</div>
+            </div>
+            <div class="card">
+                <div class="card-header">TherapyRoute</div>
+                <div class="meta-info">Claim a strong CPH/Malmö cross-border profile for local SEO to attract high-net-worth private clients.</div>
+            </div>
+        </div>
+
+        <!-- Bonus -->
+        <h2 class="section-title"><span class="badge">🎮 Bonus:</span> The Gaming/Tech Niche</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Targeting severe corporate burnout, crunch culture, and dopamine management.</p>
+
+        <div class="grid bonus">
+            
+            <div class="card">
+                <div class="tag">Corporate Wellness</div>
+                <div class="card-header">IO Interactive</div>
+                <div class="meta-info">
+                    <div>📍 Gammel Mønt 4, DK-1117 CPH K</div>
+                    <div>✉️ <strong>Action:</strong> Reach out to Head of HR.</div>
+                </div>
+                <div class="pitch-box">
+                    "I offer confidential 'Mental Wellness & High-Performance Coaching' for senior devs to mitigate crunch-induced substance use, without traditional clinical stigma."
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="tag">Workshop Strategy</div>
+                <div class="card-header">SYBO</div>
+                <div class="meta-info">
+                    <div>📍 Holmens Kanal 7, 3rd Fl, 1060 CPH K</div>
+                    <div>✉️ <strong>Action:</strong> Pitch recurring workshops + office hours.</div>
+                </div>
+                <div class="pitch-box">
+                    "Workshop Pitch: 'Thriving in Hyper-Growth: Preventing Burnout and Managing Dopamine in the Tech Sector.'"
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="tag">Expat Engineers</div>
+                <div class="card-header">Unity Technologies</div>
+                <div class="meta-info">
+                    <div>📍 Niels Hemmingsens Gade 24, 1153 CPH K</div>
+                    <div>✉️ <strong>Action:</strong> Pitch to corporate wellbeing leads.</div>
+                </div>
+                <div class="pitch-box">
+                    "I provide culturally fluent mental health consulting directly to your massive pool of international engineering talent."
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
